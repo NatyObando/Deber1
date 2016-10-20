@@ -1,0 +1,53 @@
+            /* UNIVERSIDAD TÉCNICA DEL NORTE
+             *  NOMBRE: OBANDO NATALY
+             *  FECHA: 20/10/2016
+             *  JUEGO DE LUCES
+             */
+
+int cont1;
+int cont2=13;
+int aux=cont1;
+int contador=0;
+int leds [10]={4,5,6,7,8,9,10,11,12,13};
+ 
+  void setup(){
+  //En esta sección con pinMode declaramos nuestros pines 
+  //ya sea d salida o entrada, en este saco es de salida 
+ pinMode(4,OUTPUT); 
+ pinMode(5,OUTPUT); 
+ pinMode(6,OUTPUT); 
+ pinMode(7,OUTPUT); 
+ pinMode(8,OUTPUT); 
+ pinMode(9,OUTPUT); 
+ pinMode(10,OUTPUT); 
+ pinMode(11,OUTPUT); 
+ pinMode(12,OUTPUT); 
+ pinMode(13,OUTPUT);
+
+}
+
+void loop() {
+//Luces1
+for (cont1 = 4, cont2=6; cont1 < 13; cont1 = cont1 +2,cont2 = cont2 +2) {
+      digitalWrite(cont1, HIGH);
+      digitalWrite(cont2, HIGH);
+      delay(200);
+      digitalWrite(cont1,LOW);
+      digitalWrite(cont2, LOW);
+      delay(200);
+         }
+ //luces2      
+ for(;contador<10;contador++){
+    digitalWrite(leds[contador],HIGH);
+    delay(100);
+    digitalWrite(leds[contador],LOW);
+     delay(100);
+    }
+    
+ //luces3   
+for (;aux <=8, cont2>=9; aux++, cont2++){
+digitalWrite(aux, HIGH);
+      delay(200);
+}
+
+      }
